@@ -80,7 +80,7 @@ if [ -f "$WORKDIR/"$JOBNAME"_create_xscale" ]; then
 fi
 
 
-head -n 7 /reg/d/psdm/cxi/cxitut13/res/zhensu/data/simcal/create-xscale >> $WORKDIR'/'$JOBNAME'_create_xscale'
+head -n 7 /reg/data/ana03/scratch/zhensu/sfxtools/create-xscale >> $WORKDIR'/'$JOBNAME'_create_xscale'
 
 
 
@@ -104,7 +104,7 @@ echo 'printf("!SPACE_GROUP_NUMBER='$SGNUM'\n");' >> $WORKDIR'/'$JOBNAME'_create_
 echo 'printf("!UNIT_CELL_CONSTANTS=      '$LATTA'    '$LATTB'   '$LATTC' '$LATTALPHA' '$LATTBETA'    '$LATTGAMMA'\n");' >> $WORKDIR'/'$JOBNAME'_create_xscale'
 echo 'printf("!NUMBER_OF_ITEMS_IN_EACH_DATA_RECORD=5\n");' >> $WORKDIR'/'$JOBNAME'_create_xscale'
 echo 'printf("!X-RAY_WAVELENGTH= '$WAVELA'\n");' >> $WORKDIR'/'$JOBNAME'_create_xscale'
-tail -n 33 /reg/d/psdm/cxi/cxitut13/res/zhensu/data/simcal/create-xscale >> $WORKDIR'/'$JOBNAME'_create_xscale'
+tail -n 33 /reg/data/ana03/scratch/zhensu/sfxtools/create-xscale >> $WORKDIR'/'$JOBNAME'_create_xscale'
 
 cd $WORKDIR && chmod +x $JOBNAME'_create_xscale'
 
